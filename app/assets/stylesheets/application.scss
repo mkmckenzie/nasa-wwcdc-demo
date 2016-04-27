@@ -1,7 +1,13 @@
+/*These stylesheets could be greatly improved by being broken up
+into partials based on what they apply to (article, application.html.erb, etc)
+but I left them all in the application.scss in order to deomstrate the styles that
+I personally added in addition to those supplied by bourbon/neat/bitters */
+
 @import "bourbon/bourbon";                                                                                     
 @import "base/base";                                                                                     
 @import "neat/neat";
 
+/*copied these from geometric article style below, in order to expand scope outside of <article>*/
 $sans-serif: 'Questrial', sans-serif;
 $serif: 'Sanchez', serif;
 
@@ -26,14 +32,17 @@ nav {
 	}
 }
 
+/*http://thoughtbot.github.io/neat-docs/latest/#outer-container*/
 .container {
 	@include outer-container(100%);
 }
 
+/*http://thoughtbot.github.io/neat-docs/latest/#shift*/
 .shift3 {
 	@include shift(3);
 }
 
+/*http://thoughtbot.github.io/neat-docs/latest/#span-columns*/
 .span6 {
 	@include span-columns(6);
 }
@@ -45,7 +54,7 @@ nav {
 	
 }
 
-/*Taken directly from http://refills.bourbon.io/type-systems/ */
+/*The following copied directly from http://refills.bourbon.io/type-systems/ */
 
 article.type-system-geometric {
   $base-border-radius: 3px !default;
@@ -56,6 +65,8 @@ article.type-system-geometric {
   $light-gray: #DDD !default;
   $medium-screen: 40em !default;
   $base-font-color: $dark-gray !default;
+  $sans-serif: 'Questrial', sans-serif;
+	$serif: 'Sanchez', serif;
 
 
   @include clearfix;
