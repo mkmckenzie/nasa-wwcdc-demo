@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>NasaApodApp</title>
+  <title>NASA APOD App</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+</head>
+
 </head>
 <body>
+	<nav>
+		<p><a href="https://twitter.com/womenwhocodedc">Twitter</a></p>
+		<p><a href="https://github.com/womenwhocodedc">GitHub</a></p>
+		<p><a href="bit.ly/wwcdcslack">Join Slack</a></p>
+	</nav>
 
 <%= yield %>
 

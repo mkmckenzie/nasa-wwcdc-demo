@@ -1,10 +1,21 @@
-<h1><%= @nasa_info["title"] %></h1>
-<% if @media_type_is_video %>
-	<iframe src="<%=@nasa_info["url"] %>"></iframe>
-<% else %>
-	<img src="<%= @nasa_info["url"] %>" />
-<% end %>
-<p><%= @nasa_info["explanation"] %></p>
-<p><%= @nasa_info["date"] %></p>
+<div class="container">
+	<div class="shift3 span6" id="title">
+		<article class="type-system-geometric">
+			<p class="type">NASA Photo of the Day</p>
+			<h1><%= @nasa_info["title"] %></h1>
+			<p class="date"><%= @nasa_info["date"] %></p>
+			<p>
+				<div id="media">
+					<% if @media_type_is_video %>
+						<iframe src="<%=@nasa_info["url"] %>"></iframe>
+					<% else %>
+						<img src="<%= @nasa_info["url"] %>" />
+					<% end %>
+				</div>
+				<span><%= @nasa_info["explanation"] %></span>
+			</p>
+		</article>
+	</div>
+</div>
 
 
