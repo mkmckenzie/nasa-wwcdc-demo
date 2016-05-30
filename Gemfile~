@@ -50,5 +50,3 @@ gem 'bourbon'
 gem 'neat'                                                                                                                                                                                                     
 gem 'refills'
 
-gem 'rails_12factor', '~> 0.0.3'
-
