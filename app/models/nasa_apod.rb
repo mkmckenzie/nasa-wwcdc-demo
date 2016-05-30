@@ -1,6 +1,6 @@
 class NasaApod < ActiveRecord::Base
-	def self.get_api_info
-		nasa_api = "https://api.nasa.gov/planetary/apod?api_key=#{ENV['NASA_API_KEY']}"
+	def self.get_api_info(date)
+		nasa_api = "https://api.nasa.gov/planetary/apod?api_key=#{ENV['NASA_API_KEY']}&date=#{date}"
 		request_to_nasa_api = Net::HTTP.get(URI(nasa_api))
 		JSON.parse request_to_nasa_api
 	end
